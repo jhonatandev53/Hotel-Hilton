@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilton || Alquilar Puesto</title>
+    <link rel="stylesheet" href="../css/parqueadero.css"> 
+    <link rel="stylesheet" href="../css/Mapa-parqueadero.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="../images/Logo-hotel-Hilton-removebg-preview.png" type="image/png">
+</head>
+<body class="bg-neutral">
+
+    <header class="header-section">
+        <div class="header-div">
+            <a href="/index.html"><img src="../images/Logo-hotel-Hilton-removebg-preview.png" alt="Logo"></a>
+        </div>
+        <nav class="nav-bar">
+            <a href="/index.html">Home</a>
+            <a href="#">Restaurante</a>
+            <a href="parqueadero.html">Parqueadero</a>
+        </nav>
+        <div class="header-button">
+            <a href="#"><span class="material-symbols-outlined">notifications</span></a>
+            <a href="./log-in.html"><span class="material-symbols-outlined">person</span></a>
+        </div>
+    </header>
+
+    <main class="booking-main">
+        <div class="booking-header">
+            <h1>Reserva tu Puesto VIP</h1>
+            <p>Selecciona un espacio disponible en verde. Tu vehículo estará seguro bajo la supervisión de Hilton.</p>
+        </div>
+
+        <div class="booking-container">
+            
+            <div class="interactive-map-card">
+                <div class="map-legend">
+                    <div class="legend-item"><span class="box free"></span> Libre</div>
+                    <div class="legend-item"><span class="box occupied"></span> Ocupado</div>
+                    <div class="legend-item"><span class="box selected"></span> Tu Selección</div>
+                </div>
+
+                <div class="detailed-parking-lot">
+                    <div class="zone-label">SECTOR A - PREMIUM</div>
+                    
+                    <div class="lot-row">
+                        <div class="lot-spot occupied">
+                            <span class="spot-number">A-1</span>
+                            <span class="material-symbols-outlined car-icon">directions_car</span>
+                        </div>
+                        <div class="lot-spot occupied">
+                            <span class="spot-number">A-2</span>
+                            <span class="material-symbols-outlined car-icon">directions_car</span>
+                        </div>
+                        
+                        <div class="lot-spot free">
+                            <span class="spot-number">A-3</span>
+                            <span class="text-free">DISPONIBLE</span>
+                        </div>
+                        <div class="lot-spot free">
+                            <span class="spot-number">A-4</span>
+                            <span class="text-free">DISPONIBLE</span>
+                        </div>
+                    </div>
+
+                    <div class="driving-lane">
+                        <span class="lane-text">CARRIL DE CIRCULACIÓN PRINCIPAL</span>
+                    </div>
+
+                    <div class="lot-row">
+                        <div class="lot-spot free">
+                            <span class="spot-number">B-1</span>
+                            <span class="text-free">DISPONIBLE</span>
+                        </div>
+                        <div class="lot-spot occupied">
+                            <span class="spot-number">B-2</span>
+                            <span class="material-symbols-outlined car-icon">directions_car</span>
+                        </div>
+                        <div class="lot-spot free">
+                            <span class="spot-number">B-3</span>
+                            <span class="text-free">DISPONIBLE</span>
+                        </div>
+                        <div class="lot-spot selected">
+                            <span class="spot-number">B-4</span>
+                            <span class="material-symbols-outlined car-icon">check_circle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-form-card">
+                <h2>Detalles de la Reserva</h2>
+                <hr class="divider">
+                
+                <div class="form-group">
+                    <label>Puesto Seleccionado</label>
+                    <div class="selected-spot-badge">B-4</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Placa del Vehículo</label>
+                    <div class="input-with-icon">
+                        <span class="material-symbols-outlined">pin</span>
+                        <input type="text" placeholder="Ej: XYZ-789">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Modelo del Vehículo (Opcional)</label>
+                    <div class="input-with-icon">
+                        <span class="material-symbols-outlined">directions_car</span>
+                        <input type="text" placeholder="Ej: Toyota Corolla">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Duración</label>
+                    <select class="custom-select">
+                        <option>1 Noche ($30.00)</option>
+                        <option>3 Noches ($80.00)</option>
+                        <option>Estadía Completa (Incluido en VIP)</option>
+                    </select>
+                </div>
+
+                <button class="btn-confirm-booking">Confirmar Reserva</button>
+            </div>
+
+        </div>
+    </main>
+    <footer class="main-footer">
+
+        <div class="footer-left">
+            <h2>Hilton Hotel</h2>
+            <p>@2026 Hilton Hotels automatización.Derechos reservados</p>
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/HiltonHotels/" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hiltonhotels/" aria-label="Instagram" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/HiltonHotels" aria-label="X (Twitter)" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/hilton" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <nav class="footer-list">
+        <ul>
+            <li><a href="./src/views/pages/politica-de-privacidad.html">Politica de privacidad</a></li>
+            <li><a href="./src/views/pages/terminos-condiciones.html">Terminos y servicios</a></li>
+            <li><a href="./src/views/pages/contacto-ayuda.html">Contacto y ayuda</a></li>
+        </ul>
+    </nav>
+    </footer>
+    <script type="module" src="/src/controllers/mapa-parqueadero.js"></script>
+    </body>
+</html>

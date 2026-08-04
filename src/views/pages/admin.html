@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilton || Admin panel</title>
+    <link rel="stylesheet" href="/src/views/css/admin.css">
+    <link rel="icon" href="/src/views/images/Logo-hotel-Hilton2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/src/views/css/notifications.css">
+    
+</head>
+<body>
+
+    <div class="admin-container">
+        
+        <div class="admin-header">
+            <a href="/index.html">
+                <img src="/src/views/images/Logo-hotel-Hilton-removebg-preview.png" class="logo">
+            </a>
+    
+            <h1>Panel de Administración</h1>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-bar" placeholder="Buscar usuario por nombre">
+            </div>
+        </div>
+
+        <table class="users-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>ID empleado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+    
+            <tbody class="table-content">
+    
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer class="main-footer">
+
+        <div class="footer-left">
+            <h2>Hilton Hotel</h2>
+            <p>@2026 Hilton Hotels automatización.Derechos reservados</p>
+        </div>
+        
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/HiltonHotels/" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hiltonhotels/" aria-label="Instagram" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/HiltonHotels" aria-label="X (Twitter)" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/hilton" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+
+        <nav class="footer-list">
+            <ul>
+                <li><a href="/src/views/pages/politica-de-privacidad.html">Politica de privacidad</a></li>
+                <li><a href="/src/views/pages/terminos-condiciones.html">Terminos y servicios</a></li>
+                <li><a href="/src/views/pages/contacto-ayuda.html">Contacto y ayuda</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+   
+    
+    <script src="/src/controllers/admin.js" type="module"></script>
+</body>
+</html>

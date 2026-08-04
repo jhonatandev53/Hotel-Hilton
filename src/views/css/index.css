@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #003366;
+    --secondary: #00B4D8;
+    --tertiary: #CAF0F8;
+    --neutral: #F8FAFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    background-color: var(--neutral) ;
+    padding: 30px;
+}
+
+.header-div img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+.nav-bar a {
+    color: var(--primary);
+    text-decoration: none;
+    margin: 20px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-bar a:hover {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+}
+
+.header-button {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-button .material-symbols-outlined {
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.header-button .material-symbols-outlined:hover {
+    color: var(--secondary);
+}
+
+.section-one {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.0)
+    ), url("../images/kanenori-beach-6292382_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 400px; 
+    margin: auto;
+    overflow: hidden; 
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+    min-width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.hero-content {
+    padding-left: 60px;
+    max-width: 500px;
+}
+
+.hero-content h2 {
+    color: var(--neutral);
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-content h1 {
+    color: var(--neutral);
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-content p {
+    color: var(--neutral);
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-content button {
+    background-color: var(--primary);
+    padding: 15px 30px;
+    border-radius: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.hero-content button:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 180, 216, 0.4);
+}
+
+.hero-content button:active {
+    transform: scale(0.97);
+}
+
+/* SECTION 2 */
+
+.section-two{
+    padding: 60px;
+    background-color: var(--neutral);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    grid-template-areas: 
+    "card-1  card-2  card-3"
+    "card-1  card-4  card-5"
+    ;
+}
+
+.card-one {grid-area: card-1;}
+.card-two {grid-area: card-2;}
+.card-three {grid-area: card-3;}
+.card-four {grid-area: card-4;}
+.card-five {grid-area: card-5;}
+
+.cards > div {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.cards > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cards > div h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.cards > div p {
+    color: #666;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.card-one span {
+    display: inline-block;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-right: 8px;
+}
+
+.card-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.cards > div img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.cards > div {
+    border: 2px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+<<<<<<< HEAD
+=======
+/* FLIP CARDS */
+
+.cards > div.flip-card {
+  perspective: 1000px;
+  padding: 0; 
+  background-color: transparent; 
+  box-shadow: none;
+  height: 250px; 
+}
+
+
+.cards > div.flip-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px; 
+  padding: 25px; 
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); 
+  box-sizing: border-box; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.flip-card:hover .flip-card-front, 
+.flip-card:hover .flip-card-back {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.flip-card-front {
+  background-color: white; 
+  color: #333;
+}
+
+.flip-card-back {
+  background-color: var(--secondary); 
+  color: white;
+  transform: rotateY(180deg); 
+}
+
+
+.flip-card-back h3 {
+  color: white !important;
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  color: #e0e0e0 !important;
+}
+
+.cards > div.card-one.flip-card {
+  height: 100% !important; 
+  min-height: 420px;     
+}
+
+
+.card-one.flip-card .flip-card-inner,
+.card-one.flip-card .flip-card-front,
+.card-one.flip-card .flip-card-back {
+  height: 100%;
+}
+
+
+.card-one.flip-card .flip-card-front {
+  justify-content: center; 
+}
+
+/* BOTONES PARTE DE ATRÁS */
+
+.btn-card-back {
+  display: inline-block;
+  margin-top: auto; 
+  padding: 10px 20px;
+  background-color: white; 
+  color: var(--primary);   
+  text-decoration: none;   
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;      
+  align-self: flex-start; 
+  cursor: pointer;
+}
+
+
+.btn-card-back:hover {
+  background-color: #f0f0f0; 
+  transform: scale(1.03);    
+}
+>>>>>>> bee9ead2c8dfe11a55df388f206f4118edc13370
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: var(--secondary);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    color: var(--primary);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.section-title h2 strong {
+    font-weight: bold;
+}
+
+.section-title p {
+    color: #888;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+<<<<<<< HEAD
+.cards > div:hover {
+    border: 2px solid var(--secondary);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 180, 216, 0.15);
+}
+
+=======
+>>>>>>> bee9ead2c8dfe11a55df388f206f4118edc13370
+/* SECTION THREE */
+.section-three {
+    position: relative;
+    width: 100%;
+    max-width: 950px;       
+    height: 420px;          
+    margin: 40px auto;     
+    
+    background-color: #cbd4dc; 
+    border-radius: 35px;    
+    overflow: hidden;       
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.img-main2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;            
+}
+
+.img-main2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      
+    opacity: 0.7;          
+}
+
+
+.hero-content-2 {
+    position: relative;
+    z-index: 2;             
+    max-width: 650px;      
+    color: #ffffff;      
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+}
+
+.hero-content-2 h2 {
+    font-size: 2.6rem;
+    font-weight: bold;     
+    margin-bottom: 12px;
+    letter-spacing: -0.5px; 
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--primary);
+}
+
+.hero-content-2 p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--primary);
+}
+
+.section-three {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(40px);
+    transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                filter 1.2s ease, 
+                transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.section-three.card-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* FOOTER */
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+<<<<<<< HEAD
+=======
+    flex-wrap: wrap;
+    gap: 20px;
+>>>>>>> bee9ead2c8dfe11a55df388f206f4118edc13370
+    max-width: 100%;
+    margin: 100px auto 0 auto;
+    padding: 20px 40px;
+    background-color: var(--primary);
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.footer-left h2{
+    color: var(--tertiary);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-left p {
+    color: var(--neutral);                
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer-list ul {
+    display: flex;              
+    gap: 25px;                     
+    list-style: none;           
+}
+
+.footer-list a {
+    color: var(--neutral);              
+    text-decoration: none;         
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+    color: var(--secondary);                
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+.footer-socials a {
+    color: #ffffff;             
+    font-size: 1.2rem;         
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease; 
+}
+
+.footer-socials a:hover {
+    color: var(--secondary);    
+    transform: translateY(-3px); 
+}
+
+@media (max-width: 992px) {
+    .main-footer {
+        padding: 40px 30px; 
+    }
+}
+
+/* BREAKPOINT FOOTER */
+<<<<<<< HEAD
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column; 
+        gap: 30px;            
+        text-align: center;     
+        padding: 40px 20px;
+=======
+@media (max-width: 950px) {
+    .main-footer {
+        flex-direction: column; 
+        gap: 25px;            
+        text-align: center;     
+        padding: 35px 20px;
+>>>>>>> bee9ead2c8dfe11a55df388f206f4118edc13370
+    }
+
+    .footer-left {
+        text-align: center;    
+    }
+
+    .footer-list ul {
+        flex-direction: column;
+<<<<<<< HEAD
+        gap: 15px;
+=======
+        gap: 12px;
+>>>>>>> bee9ead2c8dfe11a55df388f206f4118edc13370
+        align-items: center;
+    }
+}
+
+/* BREAKPOINT DE LAPTOPS O TABLETS GRANDES */
+@media (max-width: 1024px) {
+    .section-one {
+        display: grid;
+        height: auto;
+        padding: 60px 20px;
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+        max-width: 600px; 
+        height: 350px;
+    }
+
+    .section-three {
+        max-width: 90%;
+        height: auto;
+    }
+
+}
+
+/* BREAKPOINT TABLETS MEDIANAS O CELULARES MEDIANOS  */
+@media (max-width: 768px) {
+    .header-section {
+        height: auto;
+        flex-wrap: wrap; 
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .header-div { order: 1; }
+    .header-button { order: 2; }
+    
+    .nav-bar {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 5px;
+        border-top: 1px solid rgba(0, 51, 102, 0.1);
+        padding-top: 10px;
+    }
+
+    .nav-bar a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+
+    .section-two {
+        padding: 40px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; 
+        grid-template-areas: none; 
+        gap: 15px;
+    }
+
+    .cards > div {
+        grid-area: auto !important; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-one {
+        justify-content: center;
+    }
+
+    .section-three {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .hero-content-2 h2 {
+        font-size: 20px;
+    }
+
+    .hero-content-2 p {
+        font-size: 13px;
+    }
+}
+
+/* BREAKPOINT CELULARES PEQUEÑOS*/
+@media (max-width: 480px) {
+    .header-section {
+        padding: 15px 10px;
+    }
+
+    .nav-bar a {
+        font-size: 13px;
+        margin: 3px 6px; 
+    }
+
+    .carousel {
+        height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 2%;
+    font-family: "Roboto", sans-serif;
+}
+
+.policy-container h1,
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.policy-container p {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.policy-container summary {
+    border: 2px solid #f1f6f7;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.policy-container summary:hover {
+    border: 2px solid #5fb8f3;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 8px;
+
+}
+
+.policy-container faq-answer  {
+    justify-content: center;
+    background: transparent;
+    padding: 5px 10px ;
+} 
+
+.contact-box h3,p {
+    border: 2px solid #f1f6f7;
+    padding: 10px 20px;
+    background: transparent;
+    border-radius: 8px;
+}
+
+
+@media (min-width: 780px){
+    .policy-container h1,h2{
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
